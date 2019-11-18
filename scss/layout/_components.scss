@@ -1,0 +1,126 @@
+body {
+  margin: 0 auto;
+  font-family: Merriweather-Light;
+}
+* {
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+  display: inline-block;
+}
+.menu {
+  justify-content: space-between;
+  &-link {
+    padding: 15px 22px;
+    border: 1px solid transparent;
+    transition: 0.4s;
+    font-size: 18px;
+    font-family: Merriweather;
+    color: #3c3c3c;
+    &:hover {
+      border: 1px solid #3c3c3c;
+      color: #000;
+      box-shadow: inset 0px 0px 7px 0.5px #3c3c3c;
+    }
+  }
+  @media screen and(max-width: 640px) {
+    flex-direction: column;
+  }
+}
+.btn {
+  padding: 15px 22px;
+  border: 1px solid #3c3c3c;
+  background: transparent;
+  transition: 0.4s;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: Merriweather;
+  color: #3c3c3c;
+  &:hover {
+    box-shadow: inset 0px 0px 7px 0.5px #3c3c3c;
+  }
+}
+.active {
+  border: 1px solid #3c3c3c;
+  color: #000;
+  box-shadow: inset 0px 0px 7px 0.5px #3c3c3c;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.head {
+  color: #3c3c3c;
+  line-height: 55px;
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0 0 20px;
+  @media screen and(max-width: 480px) {
+    font-size: 34px;
+  }
+  @media screen and(max-width: 360px) {
+    font-size: 26px;
+    line-height: 40px;
+  }
+  @media screen and(max-width: 320px) {
+    font-size: 25px;
+  }
+}
+.title,
+.price {
+  font-family: Merriweather-Bold;
+  font-size: 18px;
+  color: #3c3c3c;
+}
+.subtitle {
+  font-size: 16px;
+  color: #3c3c3c;
+}
+.decoration {
+  height: 33px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: url("../img/decoration.png");
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+@keyframes active {
+  0% {
+    opacity: 0;
+    display: flex;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.hide {
+  display: none;
+}
+.show {
+  animation: active 1s linear backwards;
+}
+.wraper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+.container {
+  max-width: 1490px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+}
